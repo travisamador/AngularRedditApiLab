@@ -1,0 +1,65 @@
+
+.title{
+    text-align: center;
+}
+
+.thumbnail{
+    height: 200px;
+    border: 2px solid black;
+    margin-right:0%;
+    display: block;
+    margin:auto; 
+}
+
+ .video{
+    height: 200px;
+    margin-left:0%;
+    display: block;
+    margin:auto;
+    background-color: black;
+}
+
+.link{
+    display: block;
+    margin:auto;
+    background-color: rgb(249, 163, 3);
+    color:white;
+    cursor: pointer;
+    border-color: white;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+}  
+p{
+    color:white;
+    text-decoration: underline  white;
+}
+
+td{
+    border: 4px solid rgb(249, 163, 3);
+    background-color: rgba(0, 0, 0, 0.797);
+    border-radius: 8px;
+    
+}
+tr{
+   
+    color:white;
+}
+
+.postTable{
+    width:50%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+.row2{
+    display:flex;
+}
+
+span{
+    display: inline-block;
+    margin-right: 5px;
+    color: white;
+}
+p{
+    display: inline;
+}
+

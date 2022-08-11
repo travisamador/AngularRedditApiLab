@@ -1,0 +1,16 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Figtree&family=Raleway&display=swap"
+  rel="stylesheet"
+/>
+<div class="box">
+  <h1>r/aww</h1>
+  <div class="topBox">
+    <app-reddit-post
+      class="post"
+      *ngFor="let p of reddit.data.children"
+      [child]="p"
+    ></app-reddit-post>
+  </div>
+</div>

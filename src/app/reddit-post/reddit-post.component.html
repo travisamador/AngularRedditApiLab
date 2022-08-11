@@ -1,0 +1,61 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+/>
+<div class="page">
+  <table class="postTable">
+    <tr class="row1">
+      <td>
+        <h2 class="title">{{ child.data.title }}</h2>
+      </td>
+    </tr>
+    <tr>
+      <td class="row2">
+        <img
+          *ngIf="
+            child.data.thumbnail !=
+            'https://b.thumbs.redditmedia.com/cta5AkWYFQU5qm29pqt3_SeBrsW8Wg6bmMI_li8TqXI.jpg'
+          "
+          class="thumbnail"
+          src="{{ child.data.thumbnail }}"
+        />
+        <video
+          class="video"
+          poster="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/1200px-HD_transparent_picture.png"
+          *ngIf="child.data.is_video && child.data.media != null"
+          controls
+        >
+          <source
+            src="{{ child.data.media.reddit_video.fallback_url }}"
+            type="video/mp4"
+          />
+          <source
+            src="{{ child.data.media.reddit_video.fallback_url }}"
+            type="video/ogg"
+          />
+          <source
+            src="{{ child.data.media.reddit_video.fallback_url }}"
+            type="video/webm"
+          />
+          video not supported
+        </video>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="link">
+          <a href="https://reddit.com{{ child.data.permalink }}">
+            <span class="material-symbols-outlined"> smart_toy </span>
+            <p>View on Reddit</p></a
+          >
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>
